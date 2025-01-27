@@ -1,2 +1,4 @@
 [build]
+mise settings set python.compile false
+
 command = "pip install -r requirements.txt && python index.py serve"
