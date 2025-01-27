@@ -1,3 +1,2 @@
 [build]
-  command = "mise settings set python.compile false && pip install -r requirements.txt && python index.py serve"
-
+  command = "./build.sh"
