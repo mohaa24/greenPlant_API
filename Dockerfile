@@ -1,5 +1,5 @@
 # Use official Python image
-FROM python:3.6
+FROM python:3.6.13
 
 # Set the working directory
 WORKDIR /
