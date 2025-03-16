@@ -137,6 +137,14 @@ async def analyze(request):
                          })
 
 
+# if __name__ == '__main__':
+#     if 'serve' in sys.argv:
+#         uvicorn.run(app=app, host='0.0.0.0', port=port, log_level="info")
+
+@app.get("/dummy")
+async def dummy():
+    return JSONResponse({"message": "Dummy service is working!", "status": "OK"})
+
 if __name__ == '__main__':
-    if 'serve' in sys.argv:
-        uvicorn.run(app=app, host='0.0.0.0', port=port, log_level="info")
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=port)
