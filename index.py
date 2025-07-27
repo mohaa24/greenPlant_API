@@ -141,8 +141,8 @@ async def analyze(request):
 #     if 'serve' in sys.argv:
 #         uvicorn.run(app=app, host='0.0.0.0', port=port, log_level="info")
 
-@app.get("/dummy")
-async def dummy():
+@app.route("/dummy", methods=['GET'])
+async def dummy(request):
     return JSONResponse({"message": "Dummy service is working!", "status": "OK"})
 
 if __name__ == '__main__':
